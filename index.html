@@ -120,12 +120,20 @@
       opacity: 0.93;
     }
 
+    .hero-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-bottom: 44px;
+    }
+
     .hero-stats {
       display: flex;
       justify-content: center;
-      gap: 40px;
+      gap: 20px;
       flex-wrap: wrap;
-      margin-bottom: 44px;
     }
 
     .stat {
@@ -157,7 +165,7 @@
       border: 2px solid rgba(255,255,255,0.4);
       border-radius: 20px;
       padding: 28px 48px;
-      margin-bottom: 40px;
+      flex-shrink: 0;
     }
 
     .counter-num {
@@ -506,25 +514,27 @@
     healthcare crisis gets worse.
   </p>
 
-  <div class="hero-stats">
-    <div class="stat">
-      <span class="stat-num">1,900+</span>
-      <span class="stat-label">Residents without<br>a family doctor</span>
+  <div class="hero-row">
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">1,900+</span>
+        <span class="stat-label">Residents without<br>a family doctor</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">1</span>
+        <span class="stat-label">Remaining GP<br>Our only other doctor just retired</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">100%</span>
+        <span class="stat-label">Community<br>commitment</span>
+      </div>
     </div>
-    <div class="stat">
-      <span class="stat-num">1</span>
-      <span class="stat-label">Remaining GP<br>Our only other doctor just retired</span>
-    </div>
-    <div class="stat">
-      <span class="stat-num">100%</span>
-      <span class="stat-label">Community<br>commitment</span>
-    </div>
-  </div>
 
-  <div class="supporter-counter">
-    <div class="counter-num">6</div>
-    <div class="counter-text">Glovertown residents have shown their support!</div>
-    <div class="counter-sub">Add your name and help us grow this number!</div>
+    <div class="supporter-counter">
+      <div class="counter-num">6</div>
+      <div class="counter-text">Glovertown residents have shown their support!</div>
+      <div class="counter-sub">Add your name and help us grow this number!</div>
+    </div>
   </div>
 
   <a href="#support" class="btn btn-green">Show Your Support &darr;</a>
