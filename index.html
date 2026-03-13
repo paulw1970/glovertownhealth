@@ -444,6 +444,86 @@
 
     .btn-blue { background: var(--blue); color: var(--white); }
 
+    /* ── YOUR STORIES ── */
+    .stories {
+      background: #fafcfe;
+      padding: 80px 24px;
+      text-align: center;
+      border-top: 4px solid var(--cyan);
+      border-bottom: 4px solid var(--cyan);
+    }
+
+    .stories .section-label { color: var(--cyan); }
+    .stories .section-title { color: var(--dark); }
+
+    .stories-intro {
+      font-size: 1.15rem;
+      color: #555;
+      max-width: 680px;
+      margin: 0 auto 44px;
+      line-height: 1.8;
+    }
+
+    .story-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 48px 40px;
+      max-width: 660px;
+      margin: 0 auto;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      text-align: left;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 16px 20px;
+      font-size: 1.05rem;
+      font-family: inherit;
+      border: 2.5px solid #cce4f7;
+      border-radius: 10px;
+      outline: none;
+      transition: border-color 0.2s;
+      color: var(--text);
+      background: var(--light);
+      resize: vertical;
+      min-height: 160px;
+      line-height: 1.6;
+    }
+
+    textarea:focus { border-color: var(--cyan); background: var(--white); }
+
+    .checkbox-group {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    input[type="checkbox"] {
+      width: 22px;
+      height: 22px;
+      accent-color: var(--blue);
+      cursor: pointer;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    .checkbox-group label {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--dark);
+      cursor: pointer;
+      margin-bottom: 0;
+    }
+
+    .story-note {
+      font-size: 0.9rem;
+      color: #888;
+      text-align: center;
+      margin-top: 16px;
+      font-style: italic;
+    }
+
     /* ── WHY GLOVERTOWN ── */
     .why {
       padding: 80px 24px;
@@ -795,6 +875,53 @@
     <a href="https://glovertown.ca/town-council/councillors-municipal-staff/" target="_blank" rel="noopener" class="btn btn-blue">
       Meet Your Councillors &rarr;
     </a>
+  </div>
+</section>
+
+<!-- ════════════════════ YOUR STORIES ════════════════════ -->
+<section class="stories" id="stories">
+  <div class="container">
+    <p class="section-label">Real Impact</p>
+    <h2 class="section-title">You Are Not Alone — Share Your Story</h2>
+    <p class="stories-intro">
+      Has the lack of a local doctor affected your daily life? Your anonymous story could help
+      change things. We will share these stories with government officials and healthcare leaders
+      to show the real human impact on our community.
+    </p>
+
+    <div class="story-card">
+      <form action="https://formspree.io/f/REPLACE_WITH_ENDPOINT" method="POST">
+
+        <div class="form-group">
+          <label for="impact_type">How has this affected you?</label>
+          <select id="impact_type" name="impact_type" required>
+            <option value="" disabled selected>Select...</option>
+            <option value="Difficulty getting appointments">Difficulty getting appointments</option>
+            <option value="Long travel to see a doctor">Long travel to see a doctor</option>
+            <option value="Using emergency room for basic care">Using emergency room for basic care</option>
+            <option value="Relying on pharmacist for medical advice">Relying on pharmacist for medical advice</option>
+            <option value="Delayed diagnosis or treatment">Delayed diagnosis or treatment</option>
+            <option value="Impact on work or income">Impact on work or income</option>
+            <option value="Impact on my children">Impact on my children</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="story">Tell us your story <span style="font-weight:400;">(anonymous — no personal details please)</span></label>
+          <textarea id="story" name="story" placeholder="For example: I had to drive to Gander with two sick children because..." required></textarea>
+        </div>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="consent" name="consent" value="agreed" required />
+          <label for="consent">I understand this story may be shared anonymously with government officials and healthcare leaders</label>
+        </div>
+
+        <button type="submit" class="submit-btn">&#10003;&nbsp; Share My Story</button>
+
+      </form>
+      <p class="story-note">Your story is completely anonymous. Do not include your name, address, or any identifying information.</p>
+    </div>
   </div>
 </section>
 
