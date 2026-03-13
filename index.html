@@ -150,6 +150,38 @@
       display: block;
     }
 
+    /* ── SUPPORTER COUNTER ── */
+    .supporter-counter {
+      display: inline-block;
+      background: rgba(255,255,255,0.12);
+      border: 2px solid rgba(255,255,255,0.4);
+      border-radius: 20px;
+      padding: 28px 48px;
+      margin-bottom: 40px;
+    }
+
+    .counter-num {
+      font-size: clamp(4rem, 10vw, 6.5rem);
+      font-weight: 900;
+      line-height: 1;
+      color: var(--white);
+      text-shadow: 0 2px 16px rgba(0,0,0,0.2);
+    }
+
+    .counter-text {
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      font-weight: 700;
+      color: var(--white);
+      margin-top: 8px;
+    }
+
+    .counter-sub {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.8);
+      margin-top: 6px;
+      font-style: italic;
+    }
+
     .btn {
       display: inline-block;
       padding: 18px 44px;
@@ -487,6 +519,12 @@
       <span class="stat-num">100%</span>
       <span class="stat-label">Community<br>commitment</span>
     </div>
+  </div>
+
+  <div class="supporter-counter">
+    <div class="counter-num">5</div>
+    <div class="counter-text">Glovertown residents have shown their support!</div>
+    <div class="counter-sub">Add your name and help us grow this number!</div>
   </div>
 
   <a href="#support" class="btn btn-green">Show Your Support &darr;</a>
